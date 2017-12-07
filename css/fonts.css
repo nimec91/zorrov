@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "Helvetica Neue Cyr Thin";
+    src: url("../fonts/HelveticaNeueCyrThin.eot");
+    src: url("../fonts/HelveticaNeueCyrThin.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/HelveticaNeueCyrThin.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyrThin.woff") format("woff"),
+    url("../fonts/HelveticaNeueCyrThin.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Officina Sans Book";
+    src: url("../fonts/OfficinaSansBook.eot");
+    src: url("../fonts/OfficinaSansBook.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OfficinaSansBook.woff") format("woff"),
+    url("../fonts/OfficinaSansBook.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Officina Sans Book Italic";
+    src: url("../fonts/OfficinaSansBookItalic.eot");
+    src: url("../fonts/OfficinaSansBookItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OfficinaSansBookItalic.woff") format("woff"),
+    url("../fonts/OfficinaSansBookItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "PT Sans Regular";
+    src: url("../fonts/PTSansRegular.eot");
+    src: url("../fonts/PTSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansRegular.woff") format("woff"),
+    url("../fonts/PTSansRegular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Muller Regular";
+    src: url("../fonts/MullerRegular.eot");
+    src: url("../fonts/MullerRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MullerRegular.svg") format("svg"),
+    url("../fonts/MullerRegular.woff") format("woff"),
+    url("../fonts/MullerRegular.otf") format("opentype"),
+    url("../fonts/MullerRegular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Muller Bold";
+    src: url("../fonts/MullerBold.eot");
+    src: url("../fonts/MullerBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MullerBold.svg") format("svg"),
+    url("../fonts/MullerBold.woff") format("woff"),
+    url("../fonts/MullerBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Muller Light";
+    src: url("../fonts/MullerLight.eot");
+    src: url("../fonts/MullerLight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MullerLight.svg") format("svg"),
+    url("../fonts/MullerLight.woff") format("woff"),
+    url("../fonts/MullerLight.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Muller Medium";
+    src: url("../fonts/MullerMedium.eot");
+    src: url("../fonts/MullerMedium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MullerMedium.svg") format("svg"),
+    url("../fonts/MullerMedium.woff") format("woff"),
+    url("../fonts/MullerMedium.otf") format("opentype"),
+    url("../fonts/MullerMedium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "PT Serif Italic";
+    src: url("../fonts/PTSerifItalic.eot");
+    src: url("../fonts/PTSerifItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSerifItalic.woff") format("woff"),
+    url("../fonts/PTSerifItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Myriad Pro Regular";
+    src: url("../fonts/MyriadProRegular.eot");
+    src: url("../fonts/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Myriad Pro Italic";
+    src: url("../fonts/MyriadProItalic.eot");
+    src: url("../fonts/MyriadProItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProItalic.woff") format("woff"),
+    url("../fonts/MyriadProItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Museo Sans Cyrl 300";
+    src: url("../fonts/MuseoSansCyrl300.eot");
+    src: url("../fonts/MuseoSansCyrl300.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MuseoSansCyrl300.woff") format("woff"),
+    url("../fonts/MuseoSansCyrl300.otf") format("opentype"),
+    url("../fonts/MuseoSansCyrl300.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Museo Sans Cyrl 700";
+    src: url("../fonts/MuseoSansCyrl700.eot");
+    src: url("../fonts/MuseoSansCyrl700.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MuseoSansCyrl700.woff") format("woff"),
+    url("../fonts/MuseoSansCyrl700.otf") format("opentype"),
+    url("../fonts/MuseoSansCyrl700.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Museo Sans Cyrl 900";
+    src: url("../fonts/MuseoSansCyrl900.eot");
+    src: url("../fonts/MuseoSansCyrl900.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MuseoSansCyrl900.svg") format("svg"),
+    url("../fonts/MuseoSansCyrl900.woff") format("woff"),
+    url("../fonts/MuseoSansCyrl900.otf") format("opentype"),
+    url("../fonts/MuseoSansCyrl900.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Officina Serif Book";
+    src: url("../fonts/OfficinaSerifBook.eot");
+    src: url("../fonts/OfficinaSerifBook.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OfficinaSerifBook.woff") format("woff"),
+    url("../fonts/OfficinaSerifBook.ttf") format("truetype");
+}

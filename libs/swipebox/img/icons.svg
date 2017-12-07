@@ -1,0 +1,15 @@
+<svg width="120" height="23.999999999999996" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="26" width="122" y="-1" x="-1"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <path fill="#ffffff" id="svg_1" d="m57.938,20.68586l-8.732,-8.719q-0.496,-0.496 -0.496,-1.212t0.496,-1.212l8.732,-8.719q0.496,-0.496 1.212,-0.496t1.212,0.496l1.004,1.004q0.496,0.496 0.496,1.212t-0.496,1.212l-6.509,6.509l6.509,6.496q0.496,0.509 0.496,1.219t-0.496,1.205l-1.004,1.004q-0.496,0.496 -1.212,0.496t-1.212,-0.496l0,0.001zm52.781,-9.924q0,0.696 -0.496,1.219l-8.732,8.719q-0.496,0.496 -1.205,0.496t-1.205,-0.496l-1.018,-1.004q-0.496,-0.522 -0.496,-1.219q0,-0.71 0.496,-1.205l6.509,-6.509l-6.509,-6.496q-0.496,-0.522 -0.496,-1.219q0,-0.71 0.496,-1.205l1.018,-1.004q0.482,-0.509 1.205,-0.509t1.205,0.509l8.732,8.719q0.496,0.496 0.496,1.205l0,-0.001z"/>
+  <path fill="#544782" stroke="null" stroke-width="null" stroke-opacity="null" fill-opacity="null" opacity="0.5" d="m0.27611,11.57936" id="svg_4"/>
+  <line fill="none" stroke="null" stroke-width="null" stroke-opacity="null" fill-opacity="null" x1="35.656442" y1="7.049324" x2="37.459669" y2="18.196542" id="svg_10" stroke-linejoin="null" stroke-linecap="null"/>
+  <rect fill="#ffffff" stroke-width="null" x="7.054283" y="1.579365" width="2" height="20" id="svg_12" transform="rotate(-135 8.054283142089844,11.579364776611328) " stroke="null"/>
+  <rect fill="#ffffff" stroke-width="null" x="7.054284" y="1.579366" width="2" height="20" id="svg_13" transform="rotate(-45 8.054284095764158,11.579365730285645) "/>
+ </g>
+</svg>
