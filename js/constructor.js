@@ -1,16 +1,16 @@
 $(window).on( 'load', ( function () {
     function Constructor() {
         var container,
-            tabs = $('.canvas-constructor-controls'),
-            options = $('.canvas-constructor-options'),
-            topControls = $('.canvas-constructor-top-controls'),
-            background = $('#canvas-constructor-background'),
-            images = [],
-            texts = [],
-            canvasOptions = {},
-            textColorTimeout,
-            overlay,
-            canvas;
+        tabs = $('.canvas-constructor-controls'),
+        options = $('.canvas-constructor-options'),
+        topControls = $('.canvas-constructor-top-controls'),
+        background = $('#canvas-constructor-background'),
+        images = [],
+        texts = [],
+        canvasOptions = {},
+        textColorTimeout,
+        overlay,
+        canvas;
 
         var init = function () {
             initCanvas(canvasOptions);
@@ -25,7 +25,7 @@ $(window).on( 'load', ( function () {
                 'selection:cleared': function () {
                     hideRedoUndo();
                     var index = $('.canvas-constructor-images-list').find('.canvas-constructor-images-list-item.selected')
-                        .removeClass('selected').find('img').data('image-index');
+                    .removeClass('selected').find('img').data('image-index');
                     hideImgEditor(index);
                 },
                 'object:moving': setTransparentObjects,
@@ -70,8 +70,8 @@ $(window).on( 'load', ( function () {
             topControls.find('.canvas-constructor-reset').on('click', resetCanvas);
 
             topControls.on('click', '.canvas-constructor-undo', undo)
-                .on('click', '.canvas-constructor-redo', redo)
-                .on('click', '.canvas-constructor-undo, .canvas-constructor-redo', updateRedoUndo);
+            .on('click', '.canvas-constructor-redo', redo)
+            .on('click', '.canvas-constructor-undo, .canvas-constructor-redo', updateRedoUndo);
 
             options.find('.canvas-constructor-images-form input').on( 'change', function() {
                 $(this).closest('.canvas-constructor-images-form').submit();
@@ -86,15 +86,15 @@ $(window).on( 'load', ( function () {
             options.find('.canvas-constructor-images-form').on('submit', sendImg);
 
             options.find('.canvas-constructor-images').on('click', '.canvas-constructor-delete-image', deleteImg)
-                .on('click', '.canvas-constructor-reset-image', resetImg)
-                .on( 'click', '.canvas-constructor-images-list-item img', function (e) {
-                    showImgEditor(e);
-                    setActiveImg(e);
-                    setActiveImgThumbnail( $(this).parent() );
-                } );
+            .on('click', '.canvas-constructor-reset-image', resetImg)
+            .on( 'click', '.canvas-constructor-images-list-item img', function (e) {
+                showImgEditor(e);
+                setActiveImg(e);
+                setActiveImgThumbnail( $(this).parent() );
+            } );
 
             options.find('.canvas-constructor-texts').on( 'click', '.canvas-constructor-delete-text', deleteText)
-                .on('click', '.canvas-constructor-texts-list-item', function (e) {
+            .on('click', '.canvas-constructor-texts-list-item', function (e) {
                 setActiveText(e);
                 showTextEditor(e);
                 setActiveTextThumbnail( $(this) );
@@ -109,12 +109,12 @@ $(window).on( 'load', ( function () {
             } );
 
             options.find('.canvas-constructor-images-editors-list').on('click', '.images-editor-controls-list-item-enlarge', enlargeImg)
-                .on('click', '.images-editor-controls-list-item-minimize', minimizeImg)
-                .on( 'click', '.images-editor-controls-list-item-rotate-right', function () {
-                    rotateImg(5);} )
-                .on( 'click', '.images-editor-controls-list-item-rotate-left', function () {
-                    rotateImg(-5);
-                } );
+            .on('click', '.images-editor-controls-list-item-minimize', minimizeImg)
+            .on( 'click', '.images-editor-controls-list-item-rotate-right', function () {
+                rotateImg(5);} )
+            .on( 'click', '.images-editor-controls-list-item-rotate-left', function () {
+                rotateImg(-5);
+            } );
 
             options.find('.canvas-constructor-images-editors-list').on( 'click', '.images-editor-filter-list-item', function () {
                 if ( ! $(this).is('.selected') ) {
@@ -182,7 +182,7 @@ $(window).on( 'load', ( function () {
                     setTextStyle('underline', true);
                 }
             } ).on( 'click', '.text-editor-styles-list-item', function () {
-                    $(this).toggleClass('selected');
+                $(this).toggleClass('selected');
             } ).on( 'click', '.text-editor-alignment-list-item-center', function () {
                 setTextStyle('textAlign', 'center');
             } ).on( 'click', '.text-editor-alignment-list-item-left', function () {
@@ -221,7 +221,7 @@ $(window).on( 'load', ( function () {
 
         function initCanvasDimension() {
             var wrapper = $('.canvas-constructor-wrapper'),
-                topMenuWrapper = $('.top-menu-wrapper');
+            topMenuWrapper = $('.top-menu-wrapper');
 
             if ( window.matchMedia('(min-width: 992px)').matches ) {
                 canvas.setHeight( $(window).height() - topMenuWrapper.outerHeight() );
@@ -278,7 +278,7 @@ $(window).on( 'load', ( function () {
 
         function sendBackground(e) {
             var target = $(e.target),
-                data = target.serialize();
+            data = target.serialize();
 
             $.ajax( {
                 url: 'php/background.php',
@@ -373,16 +373,16 @@ $(window).on( 'load', ( function () {
 
             var item = $('<li class="canvas-constructor-images-editors-list-item clearfix" data-image-editor-index="' + (images.length - 1) + '">' +
                 '<ul class="images-editor-controls-list">' +
-                    '<li class="images-editor-controls-list-item images-editor-controls-list-item-enlarge"></li>' +
-                    '<li class="images-editor-controls-list-item images-editor-controls-list-item-minimize"></li>' +
-                    '<li class="images-editor-controls-list-item images-editor-controls-list-item-rotate-right"></li>' +
-                    '<li class="images-editor-controls-list-item images-editor-controls-list-item-rotate-left"></li>' +
+                '<li class="images-editor-controls-list-item images-editor-controls-list-item-enlarge"></li>' +
+                '<li class="images-editor-controls-list-item images-editor-controls-list-item-minimize"></li>' +
+                '<li class="images-editor-controls-list-item images-editor-controls-list-item-rotate-right"></li>' +
+                '<li class="images-editor-controls-list-item images-editor-controls-list-item-rotate-left"></li>' +
                 '</ul>' +
                 '<ul class="images-editor-filter-list">' +
-                    '<li class="images-editor-filter-list-item images-editor-filter-list-item-sepia"></li>' +
-                    '<li class="images-editor-filter-list-item images-editor-filter-list-item-greyscale"></li>' +
-                    '<li class="images-editor-filter-list-item images-editor-filter-list-item-white-black"></li>' +
-                    '<li class="images-editor-filter-list-item images-editor-filter-list-item-vintage"></li>' +
+                '<li class="images-editor-filter-list-item images-editor-filter-list-item-sepia"></li>' +
+                '<li class="images-editor-filter-list-item images-editor-filter-list-item-greyscale"></li>' +
+                '<li class="images-editor-filter-list-item images-editor-filter-list-item-white-black"></li>' +
+                '<li class="images-editor-filter-list-item images-editor-filter-list-item-vintage"></li>' +
                 '</ul>'+
                 '</li>');
 
@@ -391,7 +391,7 @@ $(window).on( 'load', ( function () {
 
         function showImgEditor(e) {
             var index = $(e.currentTarget).data('image-index'),
-                list = options.find('.canvas-constructor-images-editors-list');
+            list = options.find('.canvas-constructor-images-editors-list');
 
             list.find('.canvas-constructor-images-editors-list-item.visible').removeClass('visible');
             list.find('[data-image-editor-index="' + index + '"]').addClass('visible');
@@ -412,13 +412,13 @@ $(window).on( 'load', ( function () {
 
         function minimizeImg() {
             var img = canvas.getActiveObject(),
-                newScale = img.scaleX - 0.05;
+            newScale = img.scaleX - 0.05;
             if (newScale > 0.1) {
                 img.scale(newScale);
                 canvas.renderAll();
             }
             else {}
-            canvas.trigger('object:modified', { target: canvas.getActiveObject() })
+                canvas.trigger('object:modified', { target: canvas.getActiveObject() })
         }
 
         function rotateImg(deg) {
@@ -458,8 +458,8 @@ $(window).on( 'load', ( function () {
 
         function resetImg(e) {
             var target = $(e.target),
-                index = target.siblings('img').data('image-index'),
-                img = images[index];
+            index = target.siblings('img').data('image-index'),
+            img = images[index];
 
             img.rotate(0);
 
@@ -487,7 +487,7 @@ $(window).on( 'load', ( function () {
 
         function deleteImg(e) {
             var target = $(e.target),
-                index = target.siblings('img').data('image-index');
+            index = target.siblings('img').data('image-index');
 
             target.closest('.canvas-constructor-images-list-item').remove();
 
@@ -541,7 +541,7 @@ $(window).on( 'load', ( function () {
 
         function showTextEditor(e) {
             var index = $(e.target).closest('.canvas-constructor-texts-list-item').data('text-index'),
-                list = options.find('.canvas-constructor-texts-editors-list');
+            list = options.find('.canvas-constructor-texts-editors-list');
 
             list.find('.canvas-constructor-texts-editors-list-item.visible').removeClass('visible');
             list.find('[data-text-editor-index="' + index + '"]').addClass('visible');
@@ -551,40 +551,40 @@ $(window).on( 'load', ( function () {
             var list = $('.canvas-constructor-texts-editors-list');
 
             var item = '<li class="canvas-constructor-texts-editors-list-item clearfix" data-text-editor-index="' + (texts.length - 1) + '">' +
-                    '<div class="canvas-constructor-texts-editors-list-item-top clearfix">' +
-                        '<textarea class="canvas-constructor-textarea">Работает &#10;многострочность</textarea>' +
-                        '<select class="canvas-constructor-font-family-select" onchange="$(this).blur()">' +
-                            '<option value="sans-serif">Sans-serif</option>' +
-                            '<option value="ClassicaOneRegular">Classica One Regular</option>' +
-                            '<option value="RobotoRegular">Roboto Regular</option>' +
-                            '<option value="Lobster">Lobster</option>' +
-                        '</select>' +
-                        '<div class="canvas-constructor-color-picker">' +
-                        '</div>' +
-                    '</div>' +
-                    '<div class="canvas-constructor-texts-editors-list-item-bottom clearfix">' +
-                        '<ul class="text-editor-styles-list" >' +
-                        '<li class="text-editor-styles-list-item text-editor-styles-list-item-bold"></li>' +
-                        '<li class="text-editor-styles-list-item text-editor-styles-list-item-italic"></li>' +
-                        '<li class="text-editor-styles-list-item text-editor-styles-list-item-underline"></li>' +
-                        '</ul>' +
-                        '<div  class="text-editor-line-height">'+
-                            '<span class="text-editor-line-height-plus"></span><span class="text-editor-line-height-minus"></span>' +
-                        '</div>' +
-                        '<ul class="text-editor-alignment-list">' +
-                        '<li class="text-editor-alignment-list-item text-editor-alignment-list-item-center"></li>' +
-                        '<li class="text-editor-alignment-list-item text-editor-alignment-list-item-left"></li>' +
-                        '<li class="text-editor-alignment-list-item text-editor-alignment-list-item-right"></li>' +
-                        '<li class="text-editor-alignment-list-item text-editor-alignment-list-item-justify"></li>' +
-                        '</ul>' +
-                    '</div>' +
-                '</li>';
+            '<div class="canvas-constructor-texts-editors-list-item-top clearfix">' +
+            '<textarea class="canvas-constructor-textarea">Работает &#10;многострочность</textarea>' +
+            '<select class="canvas-constructor-font-family-select" onchange="$(this).blur()">' +
+            '<option value="sans-serif">Sans-serif</option>' +
+            '<option value="ClassicaOneRegular">Classica One Regular</option>' +
+            '<option value="RobotoRegular">Roboto Regular</option>' +
+            '<option value="Lobster">Lobster</option>' +
+            '</select>' +
+            '<div class="canvas-constructor-color-picker">' +
+            '</div>' +
+            '</div>' +
+            '<div class="canvas-constructor-texts-editors-list-item-bottom clearfix">' +
+            '<ul class="text-editor-styles-list" >' +
+            '<li class="text-editor-styles-list-item text-editor-styles-list-item-bold"></li>' +
+            '<li class="text-editor-styles-list-item text-editor-styles-list-item-italic"></li>' +
+            '<li class="text-editor-styles-list-item text-editor-styles-list-item-underline"></li>' +
+            '</ul>' +
+            '<div  class="text-editor-line-height">'+
+            '<span class="text-editor-line-height-plus"></span><span class="text-editor-line-height-minus"></span>' +
+            '</div>' +
+            '<ul class="text-editor-alignment-list">' +
+            '<li class="text-editor-alignment-list-item text-editor-alignment-list-item-center"></li>' +
+            '<li class="text-editor-alignment-list-item text-editor-alignment-list-item-left"></li>' +
+            '<li class="text-editor-alignment-list-item text-editor-alignment-list-item-right"></li>' +
+            '<li class="text-editor-alignment-list-item text-editor-alignment-list-item-justify"></li>' +
+            '</ul>' +
+            '</div>' +
+            '</li>';
 
             list.append(item);
 
             var input = document.createElement('input'),
-                picker = new jscolor(input),
-                index = (texts.length - 1);
+            picker = new jscolor(input),
+            index = (texts.length - 1);
 
             picker.fromString('000000');
 
@@ -612,8 +612,8 @@ $(window).on( 'load', ( function () {
 
         function updateText(e) {
             var target = $(e.target),
-                newText = target.val(),
-                index = target.closest('.canvas-constructor-texts-editors-list-item').data('text-editor-index');
+            newText = target.val(),
+            index = target.closest('.canvas-constructor-texts-editors-list-item').data('text-editor-index');
 
             texts[index].set('text', newText);
             canvas.renderAll();
@@ -641,7 +641,7 @@ $(window).on( 'load', ( function () {
         function deleteText(e) {
             e.stopPropagation();
             var target = $(e.target),
-                index = target.parent().data('text-index');
+            index = target.parent().data('text-index');
 
             target.closest('.canvas-constructor-texts-list-item').remove();
 
@@ -751,7 +751,7 @@ $(window).on( 'load', ( function () {
             if ( object.type == 'text' ) {
                 var index = texts.indexOf(object);
                 options.find( '.canvas-constructor-texts-editors-list-item[data-text-editor-index="' + index + '"] .canvas-constructor-textarea')
-                    .val(object.text);
+                .val(object.text);
 
                 texts[index].picker.fromString( object.fill );
                 checkLineHeightControls();
@@ -772,7 +772,7 @@ $(window).on( 'load', ( function () {
                 var index = texts.indexOf(object);
 
                 options.find( '.canvas-constructor-texts-editors-list-item[data-text-editor-index="' + index + '"] .canvas-constructor-textarea')
-                    .val(object.text);
+                .val(object.text);
 
                 texts[index].picker.fromString( object.fill );
                 checkLineHeightControls();
@@ -813,15 +813,15 @@ $(window).on( 'load', ( function () {
 
         function sendCanvasData() {
             var data = JSON.stringify( canvas.getObjects() );
-          
+
             $.post( 'php/buy.php', {objects: data}, function (data) {
-                    
+
             } );
         }
 
         return {
             init: init
-        }
+        };
     }
 
     var constructor = Constructor();

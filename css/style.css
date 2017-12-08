@@ -84,7 +84,9 @@
 .left-menu-filter-button,
 .left-menu-profile-button-authorization,
 .left-menu-profile-button-sign-in,
-.left-menu-profile-button {
+.left-menu-profile-button,
+.authorization-form-submit,
+.registration-form-submit {
     border: 1px solid #B19463;
     color: #B19463;
 }
@@ -98,7 +100,9 @@
 .start-page-about-us-button,
 .start-page-own-design-button,
 .bag-submit,
-.specials-button {
+.specials-button,
+.authorization-form-submit,
+.registration-form-submit {
     margin: 0 auto;
     width: 65%;
 }
@@ -115,7 +119,9 @@
 .left-menu-filter-buttons .left-menu-filter-button:hover,
 .left-menu-profile-button-authorization:hover,
 .left-menu-profile-button-sign-in:hover,
-.left-menu-profile-button:hover {
+.left-menu-profile-button:hover,
+.authorization-form-submit:hover,
+.registration-form-submit:hover {
     color: #FFF;
     background: #B19463;
 }
@@ -134,7 +140,9 @@
 .personal-area-submit,
 .bag-submit,
 .recalls-form-submit,
-.left-menu-filter-button:first-child {
+.left-menu-filter-button:first-child,
+.authorization-form-submit,
+.registration-form-submit {
     white-space: normal;
     background: none;
 }
@@ -230,7 +238,9 @@
     .start-page-own-design .start-page-own-design-button,
     .bag .bag-submit,
     .contact-us-submit,
-    .recalls-form-submit {
+    .recalls-form-submit,
+    .authorization-form-submit,
+    .registration-form-submit {
         width: 20%;
     }
     .specials-button {
@@ -2330,8 +2340,10 @@
 .contact-us-title,
 .contact-work-times-title,
 .contact-us-address,
-.start-page-sub-title {
-    font-family: "Officina Sans Book", sans-serif;
+.start-page-sub-title,
+.authorization-title,
+.registration-title {
+    font-family: "Officina Sans Book";
     font-weight: normal;
 }
 .about-us-title,
@@ -2343,7 +2355,9 @@
 .contact-us-title,
 .contact-us-address,
 .start-page-about-us .start-page-sub-title,
-.start-page-own-design .start-page-sub-title {
+.start-page-own-design .start-page-sub-title,
+.authorization-title,
+.registration-title {
     text-align: center;
 }
 .delivery-sub-title,
@@ -2359,14 +2373,18 @@
 .recalls-title,
 .bag-title,
 .contact-us-title,
-.start-page-sub-title {
+.start-page-sub-title,
+.authorization-title,
+.registration-title {
     font-size: 24px;
 }
 .about-us-title,
 .delivery-title,
 .wholesale-title,
 .recalls-title,
-.bag-title {
+.bag-title,
+.authorization-title,
+.registration-title {
     margin: 0 0 20px;
 }
 .contact-us-title,
@@ -2500,7 +2518,9 @@
     .wholesale-title,
     .start-page-sub-title,
     .bag-title,
-    .contact-us-title {
+    .contact-us-title,
+    .authorization-title,
+    .registration-title {
         margin-bottom: 30px;
         font-size: 30px;
     }
@@ -2610,7 +2630,12 @@
 .call-back-pop-up-form textarea,
 .bag-form .bag-offer-info input[type="text"],
 .bag-form .bag-offer-info input[type="email"],
-.bag-form .bag-offer-info textarea {
+.bag-form .bag-offer-info textarea,
+.authorization-form input[type="email"],
+.authorization-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form input[type="text"] {
     width: 100%;
     padding: 7px;
     border-radius: 5px;
@@ -2634,7 +2659,12 @@
 .recalls-form input[type="text"],
 .call-back-pop-up-form input[type="text"],
 .bag-form .bag-offer-info input[type="text"],
-.bag-form .bag-offer-info input[type="email"] {
+.bag-form .bag-offer-info input[type="email"],
+.authorization-form input[type="email"],
+.authorization-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form input[type="text"] {
     margin: 5px 0 10px;
     font-size: 14px;
 }
@@ -2646,7 +2676,12 @@
 .contact-us-form textarea,
 .bag-form .bag-offer-info input[type="text"],
 .bag-form .bag-offer-info input[type="email"],
-.bag-form .bag-offer-info textarea {
+.bag-form .bag-offer-info textarea,
+.authorization-form input[type="email"],
+.authorization-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form input[type="text"] {
     color: #725e53;
 }
 .contact-us-form textarea,
@@ -2691,7 +2726,12 @@
 .recalls-form textarea.error,
 .contact-us-form input[type="text"].error,
 .contact-us-form input[type="email"].error,
-.contact-us-form textarea.error {
+.contact-us-form textarea.error,
+.authorization-form input[type="email"].error,
+.authorization-form input[type="password"].error,
+.registration-form input[type="email"].error,
+.registration-form input[type="password"].error,
+.registration-form input[type="text"].error {
     border-color: #D9534F;
 }
 /*CONTACT US PAGE MOBILE DEVICES END*/
@@ -2760,7 +2800,9 @@
     }
     .contact-us-form input[type="text"],
     .contact-us-form input[type="email"],
-    .recalls-form input[type="text"] {
+    .recalls-form input[type="text"],
+    .authorization-form input[type="email"],
+    .authorization-form input[type="password"] {
         margin: 10px 0 0;
     }
     .contact-us-text-inputs > label:last-of-type {
@@ -3431,7 +3473,9 @@
 .call-back-pop-up-form label,
 .recalls-pop-up-solve-problem-form label,
 .recalls-form label,
-.contact-us-form label {
+.contact-us-form label,
+.authorization-form label,
+.registration-form label {
     display: block;
 }
 .recalls-pop-up-solve-problem-button-call,
@@ -3978,7 +4022,9 @@
 }
 .personal-area-user-contacts-form,
 .recalls-form,
-.bag-offer-info {
+.bag-offer-info,
+.authorization-form,
+.registration-form {
     font: 14px "PT Serif Italic";
 }
 .personal-area-user-contacts,
@@ -4184,7 +4230,9 @@
         display: none;
     }
     .personal-area-user-contacts-form,
-    .recalls-form {
+    .recalls-form,
+    .authorization-form,
+    .registration-form {
         font-size: 15px;
     }
 }
@@ -4207,7 +4255,9 @@
 /*PERSONAL AREA PAGE END*/
 /*BAG PAGE*/
 /*BAG PAGE MOBILE DEVICES*/
-.bag {
+.bag,
+.authorization,
+.registration {
     padding: 0 25px;
 }
 .bag-table {
@@ -4288,7 +4338,8 @@
 .bag-table-footer-total-title,
 .bag-authentication-title,
 .bag-bonus-text-title,
-.bag-table-payment-bonus-text {
+.bag-table-payment-bonus-text,
+.authentication-title {
     color: #696969;
     font: 14px "PT Serif Italic";
 }
@@ -4329,19 +4380,22 @@
 .bag-authentication-title:first-child {
     margin: 0 0 10px;
 }
-.bag-authentication-title:last-child {
+.bag-authentication-title:last-child,
+.authentication-title {
     margin: 15px 0 0;
 }
 .bag-bonus-text {
     margin: 0 0 15px;
 }
-.bag-authentication a {
+.bag-authentication a,
+.authorization .authorization-registration-link {
     display: inline-block;
     color: #428bca;
     text-decoration: underline;
     font: 13px "PT Serif Italic";
 }
-.bag-authentication a:hover {
+.bag-authentication a:hover,
+.authorization .authorization-registration-link:hover {
     color: #2a6496;
     text-decoration: none;
 }
@@ -4357,7 +4411,9 @@
 .recalls-pop-up-solve-problem-form label.error,
 .recalls-form-submit label.error,
 .recalls-form label.error,
-.contact-us-form label.error {
+.contact-us-form label.error,
+.authorization-form label.error,
+.registration-form label.error {
     color: #D9534F;
     margin: -5px 0 10px;
 }
@@ -4407,6 +4463,7 @@
     color: #be9656;
     font-size: 12px;
     text-align: justify;
+    margin-top: 10px;
 }
 .bag-payment-dropdown-description {
     display: none;
@@ -4433,7 +4490,8 @@
 /*BAG PAGE MOBILE DEVICES END*/
 /*BAG PAGE DESKTOPS*/
 @media only screen and (min-width: 992px) {
-    .bag {
+    .bag,
+    .authorization {
         padding: 0;
     }
     .bag-table {
@@ -4490,7 +4548,8 @@
         margin-left: 0;
     }
     .recalls-form input[type="text"] + label.error,
-    .contact-us-form input[type="text"] + label.error {
+    .contact-us-form input[type="text"] + label.error,
+    .authorization-form label.error {
         margin-top: 5px;
     }
     .contact-us-form .contact-us-text-inputs > label:last-of-type label.error {
@@ -4499,3 +4558,47 @@
 }
 /*BAG PAGE DESKTOPS END*/
 /*BAG PAGE END*/
+/*AUTHORIZATION PAGE*/
+/*AUTHORIZATION PAGE MOBILE DEVICES*/
+.authentication-error-text,
+.registration-error-text {
+    color: #D9534F;
+    font: 14px "PT Serif Italic";
+    margin-bottom: 15px;
+    text-align: center;
+}
+.authorization-form {
+    margin-bottom: 25px;
+}
+/*AUTHORIZATION PAGE MOBILDE DEVICES END*/
+/*AUTHORIZATION PAGE DESKTOPS*/
+@media only screen and (min-width: 992px) {
+    .authorization-form label,
+    .registration-form label {
+        width: 45%;
+    }
+    .authorization-form label:first-child,
+    .registration-form label:nth-child(odd) {
+        float: left;
+    }
+    .authorization-form label:nth-child(2),
+    .registration-form label:nth-child(even) {
+        float: right;
+    }
+    .authorization-form-submit,
+    .registration-form-submit {
+        margin-top: 20px;
+    }
+    .authentication-error-text,
+    .registration-error-text {
+        font-size: 15px;
+    }
+}
+/*AUTHORIZATION PAGE DESKTOPS END*/
+/*AUTHORIZATION PAGE END*/
+/*REGISTRATION PAGE*/
+/*REGISTRATION PAGE MOBILE DEVICES*/
+/*REGISTRATION PAGE MOBILDE DEVICES END*/
+/*REGISTRATION PAGE DESKTOPS*/
+/*REGISTRATION PAGE DESKTOPS END*/
+/*REGISTRATION PAGE END*/

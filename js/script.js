@@ -65,14 +65,24 @@ $(document).ready(function () {
         "Введите валидный номер телефона");
 
     $.validator.addMethod("myEmail", $.validator.methods.email, "Введите валидный email");
+    $.validator.addMethod("myEmailRequired", $.validator.methods.required, "Введите Ваш email");
 
     $.validator.addMethod("myNameRequired", $.validator.methods.required, "Введите ваше имя");
 
     $.validator.addMethod("myMessageRequired", $.validator.methods.required, "Введите текст сообщения");
 
+    $.validator.addMethod("myPasswordRequired", $.validator.methods.required, "Введите пароль");
+    $.validator.addMethod("myPasswordMinLength", $.validator.methods.minlength, "Минимальная длинна пароля 6 символов");
+    $.validator.addMethod("myPasswordMaxLength", $.validator.methods.maxlength, "Максимальная длинна пароля 32 символа");
+
+    $.validator.addMethod("myPasswordEqualTo", $.validator.methods.equalTo, "Пароли не совпадают");
+
     $.validator.addClassRules( {
         'email-field': {
             myEmail: true
+        },
+        'email-field-required': {
+            myEmailRequired: true
         },
         'phone-field': {
             phoneValidation: true
@@ -82,6 +92,14 @@ $(document).ready(function () {
         },
         'message-field': {
             myMessageRequired: true
+        },
+        'password-field': {
+            myPasswordRequired: true,
+            myPasswordMinLength: 6,
+            myPasswordMaxLength: 32
+        },
+        'password-equal': {
+            myPasswordEqualTo: "#registration-password-field"
         }
     } );
 
